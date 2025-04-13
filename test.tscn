@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0wo1bwg001ft"]
+
+[ext_resource type="PackedScene" uid="uid://c182opn4i0506" path="res://assets/model.fbx" id="1_37kl0"]
+[ext_resource type="Script" uid="uid://c87qkkiqoowts" path="res://test.gd" id="2_8uh7m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_37kl0"]
+albedo_color = Color(0.607843, 0, 0, 1)
+metallic_specular = 1.0
+roughness = 0.15
+clearcoat_roughness = 0.0
+refraction_scale = 0.27
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8uh7m"]
+metallic = 1.0
+roughness = 0.65
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppyta"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6uqi0"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="model" instance=ExtResource("1_37kl0")]
+script = ExtResource("2_8uh7m")
+
+[node name="sphere" parent="bone" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_37kl0")
+
+[node name="sphere_1" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_8uh7m")
+
+[node name="cylinder" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ppyta")
+
+[node name="cylinder_1" parent="." index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6uqi0")

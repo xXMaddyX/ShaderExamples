@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3ptj8lytrb3f"]
+
+[ext_resource type="Shader" uid="uid://v1msqnu52rye" path="res://Scenes/WaterShaders/distorbion/TestDistoption.gdshader" id="1_6p1vc"]
+[ext_resource type="Texture2D" uid="uid://bet8l0ogp5ge3" path="res://assets/WaterLike.png" id="2_tpgpj"]
+[ext_resource type="Texture2D" uid="uid://jyfnoi4iptcr" path="res://assets/WasserDistor.png" id="3_kttqd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qniv7"]
+shader = ExtResource("1_6p1vc")
+shader_parameter/distMap = ExtResource("3_kttqd")
+shader_parameter/strength = 0.01
+
+[node name="TestDistoption" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_qniv7")
+texture = ExtResource("2_tpgpj")

@@ -1,0 +1,189 @@
+[gd_scene load_steps=35 format=3 uid="uid://btoixjw5p6ygt"]
+
+[ext_resource type="Shader" uid="uid://b3x0mwk5pnxf6" path="res://Scenes/shaderTests/ShaderTest1.gdshader" id="1_2k3ac"]
+[ext_resource type="Script" uid="uid://cge005dnk55nx" path="res://Scenes/shaderTests/shader_test_1.gd" id="1_7plni"]
+[ext_resource type="Texture2D" uid="uid://4scoim6im7om" path="res://icon.svg" id="2_7plni"]
+[ext_resource type="Shader" uid="uid://bnsjlvm15awrl" path="res://Scenes/shaderTests/ShaderTest2.gdshader" id="4_t0ua2"]
+[ext_resource type="Shader" uid="uid://bom4q1guxaek2" path="res://Scenes/shaderTests/ShaderTest3.gdshader" id="5_j8cmt"]
+[ext_resource type="Shader" uid="uid://bm4v6p5w61cu4" path="res://Scenes/shaderTests/ShaderTest4.gdshader" id="6_46m08"]
+[ext_resource type="Shader" uid="uid://gy4m6s046vyv" path="res://Scenes/shaderTests/ShaderTest5.gdshader" id="7_3nlfb"]
+[ext_resource type="Shader" uid="uid://duvkum8n6c6cp" path="res://Scenes/shaderTests/ShaderTest6.gdshader" id="8_aurfx"]
+[ext_resource type="Texture2D" uid="uid://ckfmsf2sqwkao" path="res://assets/test.png" id="9_cymvu"]
+[ext_resource type="Shader" uid="uid://b7xbdi0nsnsl7" path="res://Scenes/shaderTests/ShaderTest7.gdshader" id="10_p3lqy"]
+[ext_resource type="Shader" uid="uid://cy6x2a1cu560r" path="res://Scenes/shaderTests/phoenix.gdshader" id="11_018js"]
+[ext_resource type="Texture2D" uid="uid://du7gg2sott8g1" path="res://assets/phönix-Sheet.png" id="12_3id6g"]
+[ext_resource type="Shader" uid="uid://d0o3bfgc2017a" path="res://Scenes/shaderTests/skewShader.gdshader" id="13_3id6g"]
+[ext_resource type="Shader" uid="uid://b7duxgqx02juw" path="res://Scenes/shaderTests/ShaderTest9.gdshader" id="14_6tcim"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0ua2"]
+shader = ExtResource("1_2k3ac")
+shader_parameter/delta = 0.0
+shader_parameter/skew = 0.0
+shader_parameter/tilt = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j8cmt"]
+shader = ExtResource("4_t0ua2")
+shader_parameter/afactor = 0.0
+shader_parameter/bfactor = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_46m08"]
+shader = ExtResource("5_j8cmt")
+shader_parameter/speed = 1.0
+shader_parameter/speedFactor = 1.0
+shader_parameter/radius = 30.0
+shader_parameter/offset = Vector2(5, 0)
+shader_parameter/delta = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3nlfb"]
+shader = ExtResource("6_46m08")
+shader_parameter/speed = 0.5
+shader_parameter/speedFactor = 5.0
+shader_parameter/radius = 37.655
+shader_parameter/offset = Vector2(6.11, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aurfx"]
+shader = ExtResource("7_3nlfb")
+shader_parameter/speed = 1.41
+shader_parameter/speedFactor = 11.92
+shader_parameter/radius = 26.125
+shader_parameter/offset = Vector2(10.065, 0)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_p3lqy"]
+diffuse_texture = ExtResource("9_cymvu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cymvu"]
+shader = ExtResource("8_aurfx")
+shader_parameter/distortion = SubResource("CanvasTexture_p3lqy")
+shader_parameter/strength = -0.05
+shader_parameter/speed = 2.155
+shader_parameter/zoom = 1.42
+
+[sub_resource type="Gradient" id="Gradient_p3lqy"]
+offsets = PackedFloat32Array(0.97541, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wl8s8"]
+gradient = SubResource("Gradient_p3lqy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wl8s8"]
+shader = ExtResource("10_p3lqy")
+shader_parameter/mask_texture = ExtResource("9_cymvu")
+shader_parameter/blackOverlay = SubResource("GradientTexture1D_wl8s8")
+shader_parameter/speed = 1.0
+shader_parameter/scale = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6tcim"]
+shader = ExtResource("11_018js")
+shader_parameter/increment = 0.01
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_018js"]
+atlas = ExtResource("12_3id6g")
+region = Rect2(0, 0, 216, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3id6g"]
+atlas = ExtResource("12_3id6g")
+region = Rect2(216, 0, 216, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tcim"]
+atlas = ExtResource("12_3id6g")
+region = Rect2(432, 0, 216, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uude"]
+atlas = ExtResource("12_3id6g")
+region = Rect2(648, 0, 216, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eidj4"]
+atlas = ExtResource("12_3id6g")
+region = Rect2(864, 0, 216, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7y46"]
+atlas = ExtResource("12_3id6g")
+region = Rect2(1080, 0, 216, 161)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61bfy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_018js")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3id6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tcim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uude")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eidj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7y46")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0uude"]
+shader = ExtResource("13_3id6g")
+shader_parameter/skew = 100.0
+shader_parameter/time_scale = 1.57
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eidj4"]
+shader = ExtResource("14_6tcim")
+shader_parameter/time_scale = 2.0
+
+[node name="ShaderTest1" type="Node2D"]
+script = ExtResource("1_7plni")
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_t0ua2")
+position = Vector2(94, 100)
+texture = ExtResource("2_7plni")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_j8cmt")
+position = Vector2(258, 101)
+texture = ExtResource("2_7plni")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_46m08")
+position = Vector2(490, 102)
+texture = ExtResource("2_7plni")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_3nlfb")
+position = Vector2(769, 104)
+texture = ExtResource("2_7plni")
+
+[node name="Icon5" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_aurfx")
+position = Vector2(1011, 104)
+texture = ExtResource("2_7plni")
+
+[node name="Icon6" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_cymvu")
+position = Vector2(94, 314)
+texture = ExtResource("2_7plni")
+
+[node name="Icon7" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_wl8s8")
+position = Vector2(284, 311)
+texture = ExtResource("2_7plni")
+
+[node name="Phönix" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_6tcim")
+position = Vector2(504, 312)
+sprite_frames = SubResource("SpriteFrames_61bfy")
+autoplay = "default"
+
+[node name="Icon8" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_0uude")
+position = Vector2(909, 444)
+texture = ExtResource("2_7plni")
+
+[node name="Icon9" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_eidj4")
+position = Vector2(160, 533)
+texture = ExtResource("2_7plni")

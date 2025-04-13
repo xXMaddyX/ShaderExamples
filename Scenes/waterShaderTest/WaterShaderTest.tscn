@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://djm7vvc0sr3at"]
+
+[ext_resource type="Texture2D" uid="uid://bet8l0ogp5ge3" path="res://assets/WaterLike.png" id="1_gel8o"]
+[ext_resource type="Shader" uid="uid://dk3llwfuvano3" path="res://Scenes/waterShaderTest/WaterShaderTest.gdshader" id="1_nfcqf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rrbaj"]
+shader = ExtResource("1_nfcqf")
+shader_parameter/time_scale = 0.225
+shader_parameter/strength = 0.055
+shader_parameter/zoom = 1.5
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/displace_factor = 0.22
+
+[node name="WaterShaderTest" type="Node2D"]
+
+[node name="WaterLike" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_rrbaj")
+position = Vector2(577.5, 325)
+scale = Vector2(0.9176, 1)
+texture = ExtResource("1_gel8o")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]

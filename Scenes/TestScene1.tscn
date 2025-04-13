@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5h1skpm244lr"]
+
+[ext_resource type="PackedScene" uid="uid://d0wo1bwg001ft" path="res://test.tscn" id="1_8lor2"]
+[ext_resource type="Script" uid="uid://dp755wha68hll" path="res://Scenes/test_scene_1.gd" id="1_vab8d"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8lor2"]
+
+[sub_resource type="Sky" id="Sky_vab8d"]
+sky_material = SubResource("ProceduralSkyMaterial_8lor2")
+
+[sub_resource type="Environment" id="Environment_vab8d"]
+background_mode = 2
+sky = SubResource("Sky_vab8d")
+
+[node name="TestScene1" type="Node3D"]
+script = ExtResource("1_vab8d")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vab8d")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.959756, 0.280834, 0, -0.280834, 0.959756, 0, 1.36643, 1.98972)
+
+[node name="model" parent="." instance=ExtResource("1_8lor2")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.7011, -0.121957, -0.702556, 0.533976, 0.742771, 0.403931, 0.472576, -0.658345, 0.585879, -1.95299, 2.04259, 1.85601)
+shadow_enabled = true

@@ -1,0 +1,14 @@
+Sprite2D
+MeshInstance3D
+Sprite3D
+SubViewport
+SubViewportContainer
+CharacterBody3D
+Camera3D
+AnimatedSprite3D
+AnimationPlayer
+DirectionalLight2D
+ColorRect
+AnimatedSprite2D
+OptionButton
+Control

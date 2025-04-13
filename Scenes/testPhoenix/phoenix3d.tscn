@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://xqyy0813kxtw"]
+
+[ext_resource type="Script" uid="uid://dg2o76cmbxqic" path="res://Scenes/testPhoenix/phoenix_3d.gd" id="1_5eymk"]
+[ext_resource type="Shader" uid="uid://do465slpo75tj" path="res://Scenes/testPhoenix/phoenix3d.gdshader" id="2_5eymk"]
+[ext_resource type="Texture2D" uid="uid://du7gg2sott8g1" path="res://assets/phönix-Sheet.png" id="3_34onl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_34onl"]
+render_priority = 0
+shader = ExtResource("2_5eymk")
+shader_parameter/phoenix = ExtResource("3_34onl")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1iryo"]
+
+[node name="Phoenix3d" type="CharacterBody3D"]
+script = ExtResource("1_5eymk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.786957, 0.617008, 0, -0.617008, 0.786957, 0, 1.7204, 2.14542)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
+material_override = SubResource("ShaderMaterial_34onl")
+mesh = SubResource("PlaneMesh_1iryo")
