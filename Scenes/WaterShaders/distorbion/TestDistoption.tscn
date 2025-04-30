@@ -8,6 +8,7 @@
 shader = ExtResource("1_6p1vc")
 shader_parameter/distMap = ExtResource("3_kttqd")
 shader_parameter/strength = 0.01
+shader_parameter/scroll_speed = Vector2(0.1, 0.1)
 
 [node name="TestDistoption" type="Node2D"]
 

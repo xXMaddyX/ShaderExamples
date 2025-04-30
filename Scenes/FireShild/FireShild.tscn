@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://cn6d65sr4uqy4"]
+
+[ext_resource type="Shader" uid="uid://biaovy4q1jmmc" path="res://Scenes/FireShild/FireShild.gdshader" id="1_w4exk"]
+[ext_resource type="Texture2D" uid="uid://bxh7lxg2yovt4" path="res://assets/firenoise.png" id="2_uismt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uismt"]
+render_priority = 0
+shader = ExtResource("1_w4exk")
+shader_parameter/noiseMap = ExtResource("2_uismt")
+shader_parameter/changeIntense = 0.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_uismt"]
+
+[node name="FireShild" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_uismt")
+mesh = SubResource("CapsuleMesh_uismt")

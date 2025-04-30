@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch465tfvujuo3"]
+
+[ext_resource type="Shader" uid="uid://peioi1vgnhe2" path="res://Scenes/PlayAroundShaders/test2D.gdshader" id="1_uqsu8"]
+[ext_resource type="Texture2D" uid="uid://4scoim6im7om" path="res://icon.svg" id="2_fu2va"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_712k4"]
+shader = ExtResource("1_uqsu8")
+shader_parameter/rotation_speed = 1.0
+shader_parameter/center = Vector2(0.5, 0.5)
+
+[node name="Test2d" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_712k4")
+texture = ExtResource("2_fu2va")
